@@ -1,0 +1,75 @@
+﻿@model WatchOnline_.Models.Watch
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Watch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.GenderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.GenderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecommendationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecommendationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShoppingCartId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShoppingCartId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WatchStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WatchStock)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.WatchId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
