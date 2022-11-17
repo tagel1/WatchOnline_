@@ -7,13 +7,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
     <link rel="stylesheet" href="~/Content/_Layout.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
     @RenderSection("Css", required: false)
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container" style="height:50px;">
+        <div class="container">
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("דף הבית", "About", "Home")</li>
@@ -30,20 +32,22 @@
             </div>
         </div>
     </div>
-    
-    <img class="l" src="~/img/2022-11-10 (7).png">
+
+    <div>
+        <img class="l" src="~/img/2022-11-10 (7).png" alt="Logo">
+    </div>
 
     <div class="container body-content">
         @RenderBody()
         <hr />
     </div>
 
-    <div class="footer-dark" style="padding: 30px 0; background-color:black; text-align:right;">
+    <div class="footer-dark">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <ul style="padding: 0; list-style: none; line-height: 1.6; font-size: 14px; margin-bottom: 0;">
+                        <ul>
                             <li>
 
                                 @Html.ActionLink("צור קשר", "Index", "Users")
@@ -52,21 +56,21 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <ul style="padding: 0; list-style: none; line-height: 1.6; font-size: 14px; margin-bottom: 0;">
+                        <ul>
                             <li>
                                 @Html.ActionLink("תקנון האתר", "Index", "Users")
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <ul style="padding: 0; list-style: none; line-height: 1.6; font-size: 14px; margin-bottom: 0;">
+                        <ul>
                             <li>
                                 @Html.ActionLink("מדיניות האתר", "Index", "Users")
                             </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <ul style="padding: 0; list-style: none; line-height: 1.6; font-size: 14px; margin-bottom: 0;">
+                        <ul>
                             <li>
                                 @Html.ActionLink("אודות", "Index", "Users")
                             </li>
@@ -76,7 +80,7 @@
             </div>
         </footer>
     </div>
-    
+
     @*<footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>*@
@@ -86,3 +90,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
